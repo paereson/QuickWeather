@@ -31,6 +31,10 @@
 		49E1A5E1296A1758002FC636 /* CityRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E1A5E0296A1758002FC636 /* CityRealmModel.swift */; };
 		49E1A5E5296A1A3C002FC636 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E1A5E4296A1A3C002FC636 /* PersistenceManager.swift */; };
 		49E1A5E7296A29A3002FC636 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 49E1A5E6296A29A3002FC636 /* Readme.md */; };
+		49E1A5E9296C2C39002FC636 /* JSONDecodingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E1A5E8296C2C39002FC636 /* JSONDecodingTest.swift */; };
+		49E1A5EC296C2FF5002FC636 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 49E1A5EB296C2FF5002FC636 /* Realm */; };
+		49E1A5EE296C2FF8002FC636 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 49E1A5ED296C2FF8002FC636 /* RealmSwift */; };
+		49E1A5F2296C34AD002FC636 /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 49E1A5F1296C34AD002FC636 /* weather.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,8 @@
 		49E1A5E0296A1758002FC636 /* CityRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityRealmModel.swift; sourceTree = "<group>"; };
 		49E1A5E4296A1A3C002FC636 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		49E1A5E6296A29A3002FC636 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		49E1A5E8296C2C39002FC636 /* JSONDecodingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodingTest.swift; sourceTree = "<group>"; };
+		49E1A5F1296C34AD002FC636 /* weather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weather.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49E1A5EE296C2FF8002FC636 /* RealmSwift in Frameworks */,
+				49E1A5EC296C2FF5002FC636 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +122,7 @@
 				49532E322968643F006C58F7 /* QuickWeatherTests */,
 				49532E3C2968643F006C58F7 /* QuickWeatherUITests */,
 				49532E1A2968643B006C58F7 /* Products */,
+				49E1A5EA296C2FE3002FC636 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,7 +158,9 @@
 		49532E322968643F006C58F7 /* QuickWeatherTests */ = {
 			isa = PBXGroup;
 			children = (
+				49E1A5EF296C3457002FC636 /* Files */,
 				49532E332968643F006C58F7 /* QuickWeatherTests.swift */,
+				49E1A5E8296C2C39002FC636 /* JSONDecodingTest.swift */,
 			);
 			path = QuickWeatherTests;
 			sourceTree = "<group>";
@@ -217,6 +228,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		49E1A5EA296C2FE3002FC636 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49E1A5EF296C3457002FC636 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				49E1A5F1296C34AD002FC636 /* weather.json */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -256,6 +282,10 @@
 				49532E312968643F006C58F7 /* PBXTargetDependency */,
 			);
 			name = QuickWeatherTests;
+			packageProductDependencies = (
+				49E1A5EB296C2FF5002FC636 /* Realm */,
+				49E1A5ED296C2FF8002FC636 /* RealmSwift */,
+			);
 			productName = QuickWeatherTests;
 			productReference = 49532E2F2968643F006C58F7 /* QuickWeatherTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -342,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49E1A5F2296C34AD002FC636 /* weather.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49E1A5E9296C2C39002FC636 /* JSONDecodingTest.swift in Sources */,
 				49532E342968643F006C58F7 /* QuickWeatherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -749,6 +781,16 @@
 			productName = Realm;
 		};
 		49E1A5DC2968E8FE002FC636 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49E1A5D92968E8FE002FC636 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		49E1A5EB296C2FF5002FC636 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49E1A5D92968E8FE002FC636 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		49E1A5ED296C2FF8002FC636 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 49E1A5D92968E8FE002FC636 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;

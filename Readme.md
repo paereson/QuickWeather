@@ -9,7 +9,7 @@
 - REST API by Alamofire ✅
 - Combine/ Async ✅
 - Languages by SwiftGen
-- Unit tests
+- Simple unit tests ✅
 - Realm database ✅
 - Firebase authentication/ crashlytics
 - Refresh for iPhone 14 pro island
